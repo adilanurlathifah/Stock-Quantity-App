@@ -39,7 +39,6 @@ class AddFragment : Fragment() {
         val quantity = view.findViewById<EditText>(R.id.quantity_edt).text
 
         try {
-
             if(inputCheck(productNames,price, quantity))
             {
                 val item = Item(0,productNames,Integer.parseInt(price.toString()), Integer.parseInt(quantity.toString()) )

@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="org.assesment2.stockquantityapp.fragments.list.ListFragment"
-        android:label="List"
+        android:label="Stock Quantity"
         tools:layout="@layout/fragment_list" >
         <action
             android:id="@+id/action_listFragment_to_addFragment"
