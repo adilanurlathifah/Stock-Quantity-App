@@ -2,6 +2,7 @@ package org.assesment2.stockquantityapp.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import org.assesment2.stockquantityapp.model.Item
 
 @Dao
 interface ItemDao {
