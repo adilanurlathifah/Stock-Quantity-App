@@ -8,13 +8,14 @@
 
 
     <EditText
-        android:id="@+id/firstName_edt"
+        android:id="@+id/productName_edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="First Name"
+        android:inputType="text"
+        android:hint="Product Name"
+        android:padding="15sp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,30 +23,32 @@
 
 
     <EditText
-        android:id="@+id/lastName_edt"
+        android:id="@+id/price_edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Last Name"
+        android:inputType="number"
+        android:padding="15sp"
+        android:hint="Price"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstName_edt" />
+        app:layout_constraintTop_toBottomOf="@+id/productName_edt" />
 
     <EditText
-        android:id="@+id/age_edt"
+        android:id="@+id/quantity_edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Age"
+        android:inputType="number"
+        android:padding="15sp"
+        android:hint="Quantity"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lastName_edt" />
+        app:layout_constraintTop_toBottomOf="@+id/price_edt" />
 
     <Button
         android:id="@+id/add_btn"
@@ -55,5 +58,5 @@
         android:text="Add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age_edt" />
+        app:layout_constraintTop_toBottomOf="@+id/quantity_edt" />
 </androidx.constraintlayout.widget.ConstraintLayout>
