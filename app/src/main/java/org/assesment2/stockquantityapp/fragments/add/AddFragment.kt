@@ -3,17 +3,18 @@ package org.assesment2.stockquantityapp.fragments.add
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import org.assesment2.stockquantityapp.R
 import org.assesment2.stockquantityapp.model.Item
+import org.assesment2.stockquantityapp.viewmodel.ItemViewModel
 
 class AddFragment : Fragment() {
 
@@ -41,11 +42,10 @@ class AddFragment : Fragment() {
 
             if(inputCheck(productNames,price, quantity))
             {
-                val item = Item(0,productNames,Integer.parseInt(price.toString(), Integer.parseInt(quantity.toString()) )
+                val item = Item(0,productNames,Integer.parseInt(price.toString()), Integer.parseInt(quantity.toString()) )
                 //add data to database
                 mItemViewModel.addItem(item)
                 Toast.makeText(requireContext(),"Successfully added", Toast.LENGTH_LONG).show()
-                //navigate to list fragment from add to list fragment
                 findNavController().navigate(R.id.action_addFragment_to_listFragment)
             }
         }

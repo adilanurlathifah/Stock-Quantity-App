@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.fragment_update.*
 import kotlinx.android.synthetic.main.fragment_update.view.*
 import org.assesment2.stockquantityapp.R
 import org.assesment2.stockquantityapp.model.Item
+import org.assesment2.stockquantityapp.viewmodel.ItemViewModel
 
 class UpdateFragment : Fragment() {
 

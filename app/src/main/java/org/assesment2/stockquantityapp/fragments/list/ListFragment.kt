@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import org.assesment2.stockquantityapp.R
+import org.assesment2.stockquantityapp.viewmodel.ItemViewModel
 
 class ListFragment : Fragment() {
 
@@ -60,7 +61,7 @@ class ListFragment : Fragment() {
     private fun deleteAllItems() {
         var builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes"){_,_ ->
-            mItemViewModel.deleteAllItems()
+            mItemViewModel.deleteAllItem()
             Toast.makeText(requireContext(),
                 "Successfully Deleted Everything ",
                 Toast.LENGTH_LONG).show()
