@@ -7,22 +7,33 @@ plugins {
 }
 
 android {
+<<<<<<< HEAD
     compileSdkVersion 33
+=======
+    compileSdkVersion 30
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "org.assesment2.stockquantityapp"
         minSdkVersion 28
+<<<<<<< HEAD
         targetSdkVersion 33
+=======
+        targetSdkVersion 30
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+<<<<<<< HEAD
     buildFeatures {
         viewBinding true
     }
 
+=======
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
     buildTypes {
         release {
             minifyEnabled false
@@ -61,7 +72,11 @@ dependencies {
     implementation("androidx.room:room-runtime:2.3.0")
     annotationProcessor("androidx.room:room-compiler:2.3.0")
 
+<<<<<<< HEAD
     // Kotlin annotation processing tool (kapt)
+=======
+    // To use Kotlin annotation processing tool (kapt)
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
     kapt("androidx.room:room-compiler:2.3.0")
     implementation "androidx.room:room-ktx:2.3.0"
     androidTestImplementation "androidx.room:room-testing:2.3.0"

@@ -11,24 +11,42 @@
         android:id="@+id/updateproductName_edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="16dp"
         android:ems="10"
         android:fontFamily="@font/mulish"
+=======
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         android:hint="Product Name"
         android:inputType="text"
         android:padding="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+=======
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
     <EditText
         android:id="@+id/updateprice_edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+<<<<<<< HEAD
         android:fontFamily="@font/mulish"
+=======
+        android:fontFamily="@font/poppins"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         android:hint="Price"
         android:inputType="number"
         android:padding="20sp"
@@ -43,7 +61,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+<<<<<<< HEAD
         android:fontFamily="@font/mulish"
+=======
+        android:fontFamily="@font/poppins"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         android:hint="Quantity"
         android:inputType="number"
         android:padding="20sp"
@@ -57,8 +79,13 @@
         android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+<<<<<<< HEAD
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/mulish"
+=======
+        android:fontFamily="@font/poppins_medium"
+        android:background="@drawable/rounded_button"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         android:text="Update"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

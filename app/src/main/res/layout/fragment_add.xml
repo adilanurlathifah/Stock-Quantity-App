@@ -11,6 +11,7 @@
         android:id="@+id/productName_edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="16dp"
         android:ems="10"
         android:fontFamily="@font/mulish"
@@ -19,6 +20,15 @@
         android:padding="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+=======
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Product Name"
+        android:padding="15sp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,12 +39,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+<<<<<<< HEAD
         android:fontFamily="@font/mulish"
         android:hint="Price"
         android:inputType="number"
         android:padding="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+=======
+        android:inputType="number"
+        android:padding="15sp"
+        android:hint="Price"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/productName_edt" />
 
@@ -44,12 +62,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
+<<<<<<< HEAD
         android:fontFamily="@font/mulish"
         android:hint="Quantity"
         android:inputType="number"
         android:padding="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
+=======
+        android:inputType="number"
+        android:padding="15sp"
+        android:hint="Quantity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/price_edt" />
 
@@ -58,9 +84,14 @@
         android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+<<<<<<< HEAD
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/mulish"
         android:text="Add"
+=======
+        android:text="Add"
+        android:background="@drawable/rounded_button"
+>>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quantity_edt" />
