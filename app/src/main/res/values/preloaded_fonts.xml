@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="preloaded_fonts" translatable="false">
-<<<<<<< HEAD
-        <item>@font/mulish</item>
-=======
->>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
         <item>@font/poppins</item>
         <item>@font/poppins_medium</item>
     </array>

@@ -6,11 +6,7 @@
             jcenter()
         }
         dependencies {
-<<<<<<< HEAD
-            classpath 'com.android.tools.build:gradle:4.2.2'
-=======
             classpath "com.android.tools.build:gradle:4.1.2"
->>>>>>> 5c6f7f2d07083d30287225b5301def476d446798
             classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
             classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
         }
