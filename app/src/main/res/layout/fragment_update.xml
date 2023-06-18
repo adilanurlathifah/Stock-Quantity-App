@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.add.AddFragment">
 
-
     <EditText
         android:id="@+id/updateProductName_edt"
         android:layout_width="match_parent"
@@ -14,11 +13,12 @@
         android:layout_marginTop="80dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:padding="10dp"
         android:hint="Product Name"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
     <EditText
@@ -29,6 +29,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Price"
+        android:padding="10dp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,6 +43,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Quantity"
+        android:padding="10dp"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

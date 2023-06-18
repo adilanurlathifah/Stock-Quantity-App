@@ -18,11 +18,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        setupActionBarWithNavController(findNavController(R.id.fragment))
+
+
+        setupActionBarWithNavController(findNavController(R.id.recyclerView))
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.fragment)
+        val navController = findNavController(R.id.recyclerView)
         return navController.navigateUp()
     }
 }

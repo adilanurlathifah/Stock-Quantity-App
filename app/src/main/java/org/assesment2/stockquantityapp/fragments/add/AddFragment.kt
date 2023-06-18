@@ -38,16 +38,17 @@ class AddFragment : Fragment() {
         val productNames = binding.productNameEdt.text.toString()
         val price = binding.priceEdt.text
         val quantity = binding.quantityEdt.text
+        val totalQuantity = Integer.parseInt(quantity.toString())
+        val totalPrice = totalQuantity * Integer.parseInt(price.toString())
 
         try {
             if (inputCheck(productNames, price, quantity)) {
                 val item = Item(
                     0,
                     productNames,
-                    Integer.parseInt(price.toString()),
-                    Integer.parseInt(quantity.toString())
+                    totalPrice,
+                    totalQuantity
                 )
-                //add data to database
                 mItemViewModel.addItem(item)
                 Toast.makeText(requireContext(), "Successfully added", Toast.LENGTH_LONG).show()
                 findNavController().navigate(R.id.action_addFragment_to_listFragment)

@@ -43,6 +43,7 @@ class UpdateFragment : Fragment() {
     }
 
     private fun updateItem() {
+
         val productName = binding.updateProductNameEdt.text.toString()
         val price = Integer.parseInt(binding.updatePriceEdt.text.toString())
         val quantity = Integer.parseInt(binding.updateQuantityEdt.text.toString())

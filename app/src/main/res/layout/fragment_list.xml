@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".fragments.list.ListFragment">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="-95dp" />
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:context=".MainActivity"
+        tools:listitem="@layout/list_item" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
