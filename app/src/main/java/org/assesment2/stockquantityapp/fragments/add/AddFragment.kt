@@ -13,18 +13,22 @@ import org.assesment2.stockquantityapp.R
 import org.assesment2.stockquantityapp.databinding.FragmentAddBinding
 import org.assesment2.stockquantityapp.model.Item
 import org.assesment2.stockquantityapp.viewmodel.ItemViewModel
+import org.assesment2.stockquantityapp.viewmodel.SharedViewModel
 
 class AddFragment : Fragment() {
 
     private lateinit var binding: FragmentAddBinding
     private lateinit var mItemViewModel: ItemViewModel
+    private lateinit var sharedViewModel: SharedViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentAddBinding.inflate(inflater, container, false)
         val view = binding.root
+        sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         mItemViewModel = ViewModelProvider(this).get(ItemViewModel::class.java)
         binding.addBtn.setOnClickListener {
@@ -38,6 +42,8 @@ class AddFragment : Fragment() {
         val quantity = binding.quantityEdt.text.toString()
         val totalQuantity = Integer.parseInt(quantity)
         val totalPrice = totalQuantity * Integer.parseInt(price)
+
+        sharedViewModel.totalPrice.value = totalPrice
 
         try {
             if (inputCheck(productNames, price, quantity)) {

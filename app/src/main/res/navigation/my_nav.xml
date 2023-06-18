@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_listFragment_to_updateFragment"
             app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_TotalFragment"
+            app:destination="@id/totalFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
@@ -36,6 +39,19 @@
         tools:layout="@layout/fragment_update">
         <action
             android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:popUpTo="@id/listFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="currentUser"
+            app:argType="org.assesment2.stockquantityapp.model.Item" />
+    </fragment>
+    <fragment
+        android:id="@+id/totalFragment"
+        android:name="org.assesment2.stockquantityapp.fragments.total.totalFragment"
+        tools:layout="@layout/fragment_totalprice">
+        <action
+            android:id="@+id/action_totalFragment_to_listFragment"
             app:destination="@id/listFragment"
             app:popUpTo="@id/listFragment"
             app:popUpToInclusive="true" />

@@ -12,11 +12,14 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import org.assesment2.stockquantityapp.R
 import org.assesment2.stockquantityapp.databinding.FragmentListBinding
 import org.assesment2.stockquantityapp.viewmodel.ItemViewModel
+import org.assesment2.stockquantityapp.viewmodel.SharedViewModel
 
 class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
     private lateinit var mItemViewModel: ItemViewModel
+    private lateinit var sharedViewModel: SharedViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,6 +27,7 @@ class ListFragment : Fragment() {
     ): View {
         binding = FragmentListBinding.inflate(inflater, container, false)
         val view = binding.root
+        sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         val adapter = ListAdapter()
         binding.recyclerView.adapter = adapter
@@ -37,8 +41,7 @@ class ListFragment : Fragment() {
         binding.floatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_listFragment_to_addFragment)
         }
-
-        // Add menu
+        //tampilkan menu
         setHasOptionsMenu(true)
 
         return view
@@ -46,14 +49,22 @@ class ListFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.delete_menu, menu)
+        inflater.inflate(R.menu.options_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.menu_delete) {
             deleteAllItems()
         }
+
+        if (item.itemId == R.id.menu_nilai_inventaris) {
+            findNavController().navigate(R.id.action_listFragment_to_TotalFragment)
+            true
+        }
         return super.onOptionsItemSelected(item)
     }
+
 
     private fun deleteAllItems() {
         val builder = AlertDialog.Builder(requireContext())
