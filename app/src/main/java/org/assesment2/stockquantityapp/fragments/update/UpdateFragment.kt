@@ -1,7 +1,6 @@
 package org.assesment2.stockquantityapp.fragments.update
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
 import android.view.*
 import android.widget.Toast
@@ -30,9 +29,9 @@ class UpdateFragment : Fragment() {
         val view = binding.root
 
         mItemViewModel = ViewModelProvider(this).get(ItemViewModel::class.java)
-        binding.updateProductNameEdt.setText(args.currentUser.productName)
-        binding.updatePriceEdt.setText(args.currentUser.price.toString())
-        binding.updateQuantityEdt.setText(args.currentUser.quantity.toString())
+        binding.updateproductNameEdt.setText(args.currentUser.productName)
+        binding.updatepriceEdt.setText(args.currentUser.price.toString())
+        binding.updatequantityEdt.setText(args.currentUser.quantity.toString())
 
         binding.updateBtn.setOnClickListener {
             updateItem()
@@ -44,12 +43,12 @@ class UpdateFragment : Fragment() {
 
     private fun updateItem() {
 
-        val productName = binding.updateProductNameEdt.text.toString()
-        val price = Integer.parseInt(binding.updatePriceEdt.text.toString())
-        val quantity = Integer.parseInt(binding.updateQuantityEdt.text.toString())
+        val productName = binding.updateproductNameEdt.text.toString()
+        val price = Integer.parseInt(binding.updatepriceEdt.text.toString())
+        val quantity = Integer.parseInt(binding.updatequantityEdt.text.toString())
 
         try {
-            if (inputCheck(productName, binding.updatePriceEdt.text, binding.updateQuantityEdt.text)) {
+            if (inputCheck(productName, price.toString(), quantity.toString())) {
                 val updatedItem = Item(args.currentUser.id, productName, price, quantity)
 
                 mItemViewModel.updateItem(updatedItem)
@@ -61,9 +60,8 @@ class UpdateFragment : Fragment() {
         }
 
     }
-
-    private fun inputCheck(productName: String, price: Editable, quantity: Editable): Boolean {
-        return !(TextUtils.isEmpty(productName) && price.isEmpty() && quantity.isEmpty())
+    private fun inputCheck(productName: String, price: String, quantity: String): Boolean {
+        return !(TextUtils.isEmpty(productName) || price.isEmpty() || quantity.isEmpty())
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

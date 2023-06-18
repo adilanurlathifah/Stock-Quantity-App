@@ -1,7 +1,6 @@
 package org.assesment2.stockquantityapp.fragments.add
 
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -33,13 +32,12 @@ class AddFragment : Fragment() {
         }
         return view
     }
-
     private fun insertDataToDatabase() {
         val productNames = binding.productNameEdt.text.toString()
-        val price = binding.priceEdt.text
-        val quantity = binding.quantityEdt.text
-        val totalQuantity = Integer.parseInt(quantity.toString())
-        val totalPrice = totalQuantity * Integer.parseInt(price.toString())
+        val price = binding.priceEdt.text.toString()
+        val quantity = binding.quantityEdt.text.toString()
+        val totalQuantity = Integer.parseInt(quantity)
+        val totalPrice = totalQuantity * Integer.parseInt(price)
 
         try {
             if (inputCheck(productNames, price, quantity)) {
@@ -58,7 +56,7 @@ class AddFragment : Fragment() {
         }
     }
 
-    private fun inputCheck(productName: String, price: Editable, quantity: Editable): Boolean {
-        return !(TextUtils.isEmpty(productName) && price.isEmpty() && quantity.isEmpty())
+    private fun inputCheck(productName: String, price: String, quantity: String): Boolean {
+        return !(TextUtils.isEmpty(productName) || price.isEmpty() || quantity.isEmpty())
     }
 }

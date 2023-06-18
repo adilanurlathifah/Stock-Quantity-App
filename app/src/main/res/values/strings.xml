@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Stock Quantity App</string>
+    <string name="nama_produk">Nama produk</string>
+    <string name="quantity">Quantity</string>
+    <string name="harga">Harga</string>
 </resources>
