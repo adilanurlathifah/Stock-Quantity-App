@@ -16,6 +16,7 @@
             app:popUpTo="@id/listFragment"
             app:popUpToInclusive="true" />
     </fragment>
+
     <fragment
         android:id="@+id/listFragment"
         android:name="org.assesment2.stockquantityapp.fragments.list.ListFragment"
