@@ -30,7 +30,7 @@
             app:destination="@id/updateFragment" />
         <action
             android:id="@+id/action_listFragment_to_TotalFragment"
-            app:destination="@id/totalFragment" />
+            app:destination="@id/totalPriceFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
@@ -47,8 +47,8 @@
             app:argType="org.assesment2.stockquantityapp.model.Item" />
     </fragment>
     <fragment
-        android:id="@+id/totalFragment"
-        android:name="org.assesment2.stockquantityapp.fragments.total.totalFragment"
+        android:id="@+id/totalPriceFragment"
+        android:name="org.assesment2.stockquantityapp.fragments.total.totalPriceFragment"
         tools:layout="@layout/fragment_totalprice">
         <action
             android:id="@+id/action_totalFragment_to_listFragment"

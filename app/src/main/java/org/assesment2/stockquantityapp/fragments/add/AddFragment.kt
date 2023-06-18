@@ -44,6 +44,8 @@ class AddFragment : Fragment() {
         val totalPrice = totalQuantity * Integer.parseInt(price)
 
         sharedViewModel.totalPrice.value = totalPrice
+        sharedViewModel.productName.value = productNames
+        sharedViewModel.quantity.value = totalQuantity
 
         try {
             if (inputCheck(productNames, price, quantity)) {
